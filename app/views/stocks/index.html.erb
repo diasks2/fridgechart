@@ -1,0 +1,9 @@
+<h1>Stocks#index</h1>
+<% @stocks.each do |stock| %>
+	<ul>
+		<li><%= link_to stock.food.name, stock %></li>
+		<li><%= distance_of_time_in_words_to_now(stock.expiration).to_i %></li>
+		<li><%= time_diff_in_natural_language(Time.now, stock.expiration) %></li>
+		<li><%= stock.quantity %></li>
+	</ul>	
+<% end %>

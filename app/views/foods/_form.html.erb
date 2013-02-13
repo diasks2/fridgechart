@@ -1,0 +1,14 @@
+<%= form_for @food do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  	<fieldset>
+	  	<%= f.label :name %>
+	  	<%= f.text_field :name %>
+
+	  	<%= f.label :food_type %>
+	  	<%= f.text_field :food_type %>
+
+	  	<%= f.label :lcd_unit %>
+	  	<%= f.text_field :lcd_unit %>
+  	</fieldset>
+  <%= f.submit "Submit", :class => 'btn btn-primary' %>
+<% end %>
