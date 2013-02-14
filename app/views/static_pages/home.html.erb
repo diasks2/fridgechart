@@ -1,2 +1,30 @@
 <% provide(:title, 'Home') %>
-<h1>FridgeChart</h1>
+<div class="top_banner">
+	<div class="container">
+		<h1 class="center" id="top_slogan">FridgeChart - Never Let Your Food Spoil Again</h1>
+		<h2>Easily track your fridge inventory. Save money. Save Time.</h2>
+		<div class="center" id="home_demo_button">
+			<%= link_to "Free Demo", root_path, :class => "m-btn red big rnd" %>
+		</div>	
+	</div>
+</div>
+<div class="container" id="lower_banner">
+	<div class="row">
+  		<div class="span4 center">
+  			<%= image_tag("tupperware.png", :alt => "Reduce Waste") %>
+  			<br>
+  			<h3>Reduces waste by alerting you as to what foods are expiring soon.</h3>
+  		</div>
+  		<div class="span4 center">
+  			<%= image_tag("grocery_list.png", :alt => "Automated Grocery Lists") %>
+  			<br>
+  			<h3>Automagically generates your grocery list.</h3>
+  		</div>
+  		<div class="span4 center">
+  			<%= image_tag("dish.png", :alt => "Recipes") %>
+  			<br>
+  			<h3>Easily see what ingredients you are missing for your favorite recipes.</h3>
+  		</div>
+  	</div>	
+  	<hr>
+</div>

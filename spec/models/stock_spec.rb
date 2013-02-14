@@ -15,7 +15,7 @@ describe Stock do
   it { should be_valid }
 
   describe "when food_id is not present" do
-    before { @stock.food_id = " " }
+    before { @stock.food_id = nil }
     it { should_not be_valid }
   end
 

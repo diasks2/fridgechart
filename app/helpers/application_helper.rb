@@ -7,7 +7,7 @@ module ApplicationHelper
 	    else
 	      "#{base_title} | #{page_title}"
 	    end
-	 end
+	end
 
 	def time_diff_in_natural_language(from_time, to_time)
 	  from_time = from_time.to_time if from_time.respond_to?(:to_time)

@@ -18,6 +18,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
   gem 'bootstrap-sass', '~> 2.2.2.0'
   gem 'bootstrap-datepicker-rails'
+  gem 'select2-rails'
 end
 
 gem 'jquery-rails', '2.0.2'

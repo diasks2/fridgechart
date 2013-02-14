@@ -1,6 +1,6 @@
 class Food < ActiveRecord::Base
   attr_accessible :food_type, :lcd_unit, :name
-  has_many :stocks
+  has_many :stocks, dependent: :destroy
 
   before_save { |food| food.name = name.downcase }
   validates :name, presence: true, uniqueness: { case_sensitive: false }

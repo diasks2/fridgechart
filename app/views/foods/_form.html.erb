@@ -5,7 +5,7 @@
 	  	<%= f.text_field :name %>
 
 	  	<%= f.label :food_type %>
-	  	<%= f.text_field :food_type %>
+	  	<%= f.select :food_type, options_for_select([[], ['Bread, Cereal, Rice and Pasta', 'Bread, Cereal, Rice and Pasta'], ['Dairy', 'Dairy'], ['Fresh Produce', 'Fresh Produce'], ['Frozen Foods', 'Frozen Foods'], ['Health and Beauty', 'Health and Beauty'], ['Household', 'Household'], ['Meat', 'Meat'], ['Staples', 'Staples'], ['Miscellaneous Foods', 'Miscellaneous Foods']], :selected => f.object.food_type), {}, {:class => "food-type-select"} %>
 
 	  	<%= f.label :lcd_unit %>
 	  	<%= f.text_field :lcd_unit %>
