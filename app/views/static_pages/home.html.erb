@@ -27,4 +27,39 @@
   		</div>
   	</div>	
   	<hr>
+    <div class="row">
+      <div class="span6 offset3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Quantity</th>
+              <th>Expires in</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @stocks.each do |stock| %>
+              <tr>
+                <td><%= link_to stock.food.name, stock %></td>
+                <td><%= stock.quantity %></td>
+                <td>
+                  <% case %>
+                    <% when (stock.expiration - Time.now).to_i / 3600 / 24 < 2 && (stock.expiration - Time.now).to_i / 3600 / 24 > 0 %>
+                      <span class="label label-important"><%= distance_of_time_in_words(Time.now, stock.expiration) %></span>
+                    <% when (stock.expiration - Time.now).to_i / 3600 / 24 < 0 %>
+                      <span class="label label-important">Expired <%= distance_of_time_in_words(Time.now, stock.expiration) %> ago</span>
+                    <% when (stock.expiration - Time.now).to_i / 3600 / 24 < 4 && (stock.expiration - Time.now).to_i / 3600 / 24 >= 2 %>
+                      <span class="label label-warning"><%= distance_of_time_in_words(Time.now, stock.expiration) %></span>  
+                    <% else %>
+                      <span class="label label-success"><%= distance_of_time_in_words(Time.now, stock.expiration) %></span>
+                  <% end %>  
+                  <%=  %>
+
+                </td>
+              </tr>  
+            <% end %>  
+          </tbody>
+        </table>
+      </div>
+    </div>    
 </div>
